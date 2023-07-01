@@ -159,14 +159,15 @@ footer {
     color: grey;
 }
 .list-inline{
-    position: fixed;
-    bottom: 2px;
-    left: 40%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+    left: -6%;
 }
 .list-inline i {
-
     padding: 20px 20px 0 0;
-    font-size: 50px;
+    font-size: 40px;
 }
 footer img{
     display: flex;
@@ -206,6 +207,41 @@ footer img{
 .fa-desktop:hover{
     opacity: 0.5;
 }
+#screen{
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+}
+#screen:hover{
+    opacity: 0.7;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+    left: 15%;
+
+}
+.col-time{
+    margin-right: 15px;
+    width: 18%;
+    font-size: 14px;
+}
+
+.col-progress{
+    margin-right: 15px;
+    width: 30%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 1000px;
+}
+.col-progress:hover{
+    height: 8px;
+}
+
 
 
 /* RESPONSIVE MEDIA  */
