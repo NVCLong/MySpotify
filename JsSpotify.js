@@ -162,11 +162,13 @@ let app={
             let idSong
             console.log(musicPath)
             for (let i = 0; i < app.songs.length; i++) {
-                if(musicPath===app.songs[i].path){
+                if(musicPath===app.songs[i].image){
                     idSong= app.songs[i].id
-                    console.log(idSong)
                 }
             }
+            app.currentIndex=idSong
+            app.loadCurrentSong()
+            app.audioPlay()
 
         }
     },
