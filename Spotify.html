@@ -82,19 +82,19 @@
             </div>
         </div>
         <div class="btn">
-        <ul class="list-inline stop">
-            <li><a href="#"><i id="randomBtn" class="fas fa-random"></i></a></li>
-            <li><a href="#"><i id="backBtn" class="fas fa-step-backward"></i></i></a></li>
-            <li><a href="#"><i id="playBtn" class="far fa-play-circle"></i></a></li>
-            <li><a href="#"><i id="pauseBtn" class="fa fa-pause" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i id="forwardBtn" class="fas fa-step-forward"></i></a></li>
-            <li><a href="#"><i class="fas fa-redo"></i></a></li>
-        </ul>
+        <div class="list-inline1">
+            <div><a href="#"><i id="randomBtn" class="fas fa-random"></i></a></div>
+            <div><a href="#"><i id="backBtn" class="fas fa-step-backward"></i></i></a></div>
+            <div><a href="#"><i id="playBtn" class="far fa-play-circle"></i></a></div>
+            <div><a href="#"><i id="pauseBtn" class="fa fa-pause" aria-hidden="true"></i></a></div>
+            <div><a href="#"><i id="forwardBtn" class="fas fa-step-forward"></i></a></div>
+            <div><a href="#"><i id="replayBtn" class="fas fa-redo"></i></a></div>
+        </div>
     </div>
         <div class="line">
             <div class="col-time" style="text-align: right;" id="timeFirst">00:00</div>
-            <progress class="col-progress" value="0" max="0"></progress>
-            <div class="col-time" style="text-align: left;" id="timeLast"></div>
+            <input class="col-progress" type="range" value="0" min="0" step="1" max="100">
+            <div class="col-time" style="text-align: left;" id="timeLast" ></div>
         </div>
         <audio id="audio" src=""></audio>
     </div>
