@@ -12,7 +12,7 @@
 
 <aside class="sidenav">
     <div class="logo">
-        <a href="#"><img class="pb-50" src="Asset/logorgb.png" alt=""></a>
+        <a href="#"><img class="pb-50" src="Asset/image/logorgb.png" alt=""></a>
     </div>
     <div class="menulink">
         <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
@@ -40,46 +40,7 @@
         <h1><strong>Welcome to MySpotify</strong></h1>
     </div>
     <div class=" container-flex text-center">
-        <div class="music-card">
-            <a href="#"><img src="Asset/lost.png" alt="" class="img"></a>
-            <p>Lost</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/Mck.png" alt="" class="img"></a>
-            <p>Chỉ một đêm nữa thôi</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/LanCuoi.png" alt="" class="img"></a>
-            <p>Lần Cuối</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/SojuLove.png" alt="" class="img"></a>
-            <p>Soju Love</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/Mck.png" alt="" class="img"></a>
-            <p>Thôi em đừng đi</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/LanCuoi.png" alt="" class="img"></a>
-            <p>Thấy Chưa</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/lost.png" alt="" class="img"></a>
-            <p>Money</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/Mck.png" alt="" class="img"></a>
-            <p>Anh đã ổn hơn</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/Mck.png" alt="" class="img"></a>
-            <p>Tối nay ta đi đâu</p>
-        </div>
-        <div class="music-card">
-            <a href="#"><img src="Asset/Mck.png" alt="" class="img"></a>
-            <p>Suit and Tie</p>
-        </div>
+
     </div>
     <div class="container-flex">
         <div class="title plb-20">
@@ -88,19 +49,19 @@
     </div>
     <div class="container-flex text-center">
         <div class="music-card">
-            <a href="#"><img src="Asset/img_4.png" alt=""></a>
+            <a href="#"><img src="Asset/image/img_4.png" alt=""></a>
             <p>Mới ra lò</p>
         </div>
         <div class="music-card">
-            <a href="#"><img src="Asset/img_1.png" alt=""></a>
+            <a href="#"><img src="Asset/image/img_1.png" alt=""></a>
             <p>Mck- mixtape</p>
         </div>
         <div class="music-card">
-            <a href="#"><img src="Asset/img_2.png" alt=""></a>
+            <a href="#"><img src="Asset/image/img_2.png" alt=""></a>
             <p>Tuyển tập nhạc chill</p>
         </div>
         <div class="music-card">
-            <a href="#"><img src="Asset/img_3.png" alt=""></a>
+            <a href="#"><img src="Asset/image/img_3.png" alt=""></a>
             <p>Indie VietNam</p>
         </div>
     </div>
@@ -110,7 +71,7 @@
 <footer>
     <div class="playmusic text-center">
         <div class="musicOnPlay">
-            <img class="playImg" src="lost.png">
+            <img class="playImg" src="Asset/image/lost.png">
             <div class="songInfo">
                 <p id="Title">Lost</p>
                 <p id="Artist">Obito</p>
@@ -120,15 +81,29 @@
                 <i class="fa fa-desktop" aria-hidden="true"></i>
             </div>
         </div>
-        <ul class="list-inline">
-            <li><a href="#"><i class="fas fa-random"></i></a></li>
-            <li><a href="#"><i class="fas fa-step-backward"></i></i></a></li>
-            <li><a href="#"><i class="far fa-play-circle"></i></a></li>
-            <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
+        <div class="btn">
+        <ul class="list-inline stop">
+            <li><a href="#"><i id="randomBtn" class="fas fa-random"></i></a></li>
+            <li><a href="#"><i id="backBtn" class="fas fa-step-backward"></i></i></a></li>
+            <li><a href="#"><i id="playBtn" class="far fa-play-circle"></i></a></li>
+            <li><a href="#"><i id="pauseBtn" class="fa fa-pause" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i id="forwardBtn" class="fas fa-step-forward"></i></a></li>
             <li><a href="#"><i class="fas fa-redo"></i></a></li>
         </ul>
     </div>
+        <div class="line">
+            <div class="col-time" style="text-align: right;" id="timeFirst">00:00</div>
+            <progress class="col-progress" value="0" max="0"></progress>
+            <div class="col-time" style="text-align: left;" id="timeLast"></div>
+        </div>
+        <audio id="audio" src=""></audio>
+    </div>
 
 </footer>
+<div id="screen">
+    <img src="Asset/image/Mck.png">
+</div>
+
 </body>
+<script src="JsSpotify.js"></script>
 </html>
