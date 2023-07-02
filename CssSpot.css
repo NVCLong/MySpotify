@@ -232,14 +232,63 @@ footer img{
 .fa-desktop:hover{
     opacity: 0.5;
 }
-#screen{
+.screen{
     position: fixed;
     right: 20px;
     bottom: 40px;
+
 }
-#screen:hover{
+.screen .fa-step-backward{
+    opacity: 0.6;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 75%;
+    left: 25%
+}
+.screen .fa-step-forward{
+    opacity: 0.6;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 75%;
+    left: 65%
+}
+.screen .fa-times{
+    opacity: 0.6;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 2%;
+    left: 90%
+}
+.screen:hover{
     opacity: 0.7;
 }
+.screen .fa-play-circle{
+    opacity: 0.6;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 75%;
+    left: 45%
+}
+.screen .fa-pause{
+    display: none;
+}
+
+.screen.playing .fa-pause{
+    opacity: 0.6;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 75%;
+    left: 45%
+}
+.screen.playing .fa-play-circle{
+ display: none;
+}
+
 .line{
     display: flex;
     flex-direction: row;
@@ -270,6 +319,9 @@ input[type=range]{
 }
 .col-progress:hover{
     height: 8px;
+}
+#screen{
+    display: flex;
 }
 
 

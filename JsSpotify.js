@@ -15,6 +15,9 @@ const backBtn=document.getElementById('backBtn')
 const replayBtn=document.getElementById('replayBtn')
 const randomBtn=document.getElementById('randomBtn')
 const musicCard=$('.text-center')
+let desktopBtn=$('.fa-desktop')
+const bightml=$('.screen')
+
 let app={
     currentIndex:0,
     songs:[
@@ -95,7 +98,7 @@ let app={
         const html=this.songs.map(function (song) {
             return `
          <div class="music-card">
-            <a href="#"><img  src="${song.image}" alt="" class="img"></a>
+            <a href="#"><img id="${song.id}" src="${song.image}" alt="" class="img"></a>
             <p class="title">${song.name}</p>
          </div>`
         })
@@ -113,7 +116,6 @@ let app={
         singer.innerText=this.currentSong.singer
         thumb.src=this.currentSong.image
         audio.src=this.currentSong.path
-        console.log(audio)
     },
     handleEvents:function (){
         let mouseclick=false
@@ -158,19 +160,25 @@ let app={
             app.audioPlay()
         }
         musicCard.onclick=function (e){
-            let musicPath=e.target.src.slice(33)
-            let idSong
-            console.log(musicPath)
-            for (let i = 0; i < app.songs.length; i++) {
-                if(musicPath===app.songs[i].image){
-                    idSong= app.songs[i].id
-                }
-            }
-            app.currentIndex=idSong
+            let musicId=e.target.id
+            app.currentIndex=musicId
             app.loadCurrentSong()
             app.audioPlay()
+        }
+        desktopBtn.onclick=function (){
+
+            bightml.innerHTML = `
+    <div class="playingScreen">
+    <div><a href="#"><i onclick="closeScreen()" id="closeBtn" class="fa fa-times" aria-hidden="true"></i></a></div>
+    <div><a href="#"><i id="backBtn1" class="fas fa-step-backward"></i></a></div>
+    <div><a href="#"><i id="playBtn1" class="far fa-play-circle"></i></a></div>
+    <div><a href="#"><i id="pauseBtn1" class="fa fa-pause" aria-hidden="true"></i></a></div>
+    <div><a href="#"><i id="forwardBtn1" class="fas fa-step-forward"></i></a></div>
+    <img src="${app.currentSong.image}">
+    </div>`
 
         }
+
     },
     nextSong: function () {
         this.currentIndex++
@@ -216,5 +224,9 @@ let app={
     }
 }
 
+function closeScreen(){
+    let html=$('.playingScreen')
+    bightml.removeChild(html)
+}
 app.start()
 console.log(playlist)
