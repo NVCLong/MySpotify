@@ -17,6 +17,9 @@ const randomBtn=document.getElementById('randomBtn')
 const musicCard=$('.text-center')
 let desktopBtn=$('.fa-desktop')
 const bightml=$('.screen')
+const lightBtn=$('.btn-light')
+const darkBtn=$('.btn-dark')
+const main=$('.main')
 
 let app={
     currentIndex:0,
@@ -170,15 +173,22 @@ let app={
             bightml.innerHTML = `
     <div class="playingScreen">
     <div><a href="#"><i onclick="closeScreen()" id="closeBtn" class="fa fa-times" aria-hidden="true"></i></a></div>
-    <div><a href="#"><i id="backBtn1" class="fas fa-step-backward"></i></a></div>
-    <div><a href="#"><i id="playBtn1" class="far fa-play-circle"></i></a></div>
-    <div><a href="#"><i id="pauseBtn1" class="fa fa-pause" aria-hidden="true"></i></a></div>
+    <div><a href="#"><i  id="backBtn1" class="fas fa-step-backward"></i></a></div>
+    <div><a href="#"><i onclick="playScreen()" id="playBtn1" class="far fa-play-circle"></i></a></div>
+    <div><a href="#"><i  onclick="pausedScreen()" id="pauseBtn1" class="fa fa-pause" aria-hidden="true"></i></a></div>
     <div><a href="#"><i id="forwardBtn1" class="fas fa-step-forward"></i></a></div>
     <img src="${app.currentSong.image}">
     </div>`
 
         }
-
+        lightBtn.onclick=function (){
+            main.classList.remove('darkMode')
+            app.start()
+        }
+        darkBtn.onclick=function (){
+            main.classList.add('darkMode')
+            app.start()
+        }
     },
     nextSong: function () {
         this.currentIndex++
@@ -207,12 +217,6 @@ let app={
         this.currentIndex=Math.floor(Math.random() * 10)
         this.loadCurrentSong()
     },
-    newSong:function (){
-        let songId=this.songs.map(function (song){
-          return song.path
-        })
-        console.log(songId)
-    },
     start: function (){
         // defind all properties for object
         this.defindedProperties()
@@ -223,6 +227,15 @@ let app={
         this.render()
     }
 }
+function playScreen(){
+    audio.play()
+    bightml.classList.add('playing')
+}
+function pausedScreen(){
+    audio.pause()
+    bightml.classList.remove('playing')
+}
+
 
 function closeScreen(){
     let html=$('.playingScreen')

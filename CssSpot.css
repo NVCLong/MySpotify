@@ -91,8 +91,15 @@ a:hover {
 
 /* MAIN SECTION */
 
-main {
-    background-color: #182F34;
+.main {
+    background-color: #57B65F;
+    margin-left: 250px;
+    margin-bottom: 60px;
+    color: white;
+    overflow: hidden;
+}
+.main.darkMode{
+    background-color: #414141;
     margin-left: 250px;
     margin-bottom: 60px;
     color: white;
@@ -278,6 +285,7 @@ footer img{
 }
 
 .screen.playing .fa-pause{
+    display: flex;
     opacity: 0.6;
     color: white;
     font-size: 30px;
