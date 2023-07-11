@@ -20,9 +20,34 @@ const bightml=$('.screen')
 const lightBtn=$('.btn-light')
 const darkBtn=$('.btn-dark')
 const main=$('.main')
+const musicAPI="http://localhost:3000/MusicDatabase"
+function getMusic(callback){
+    fetch(musicAPI)
+        .then(function (response){
+            return response.json()
+        })
+        .then(callback)
+}
+function  st(){
+    getMusic(function (courses){
+        let html=courses.map(function (course){
+            return course
+        })
+        console.log(html)
+    })
+}
+st()
 
 let app={
     currentIndex:0,
+    getMusic:function (callback) {
+
+            fetch(musicAPI)
+                .then(function (response){
+                    return response.json()
+                })
+                .then(callback)
+    },
     songs:[
         {
             id: 0,
@@ -97,8 +122,8 @@ let app={
             image:"Asset/image/Mck.png"
         }
     ],
-    render: function () {
-        const html=this.songs.map(function (song) {
+    render: function (songs) {
+        const html=songs.map(function (song) {
             return `
          <div class="music-card">
             <a href="#"><img id="${song.id}" src="${song.image}" alt="" class="img"></a>
@@ -108,11 +133,13 @@ let app={
         playlist.innerHTML=html.join("")
     },
     defindedProperties: function () {
-        Object.defineProperty(this,'currentSong',{
-            get:function () {
-                return this.songs[this.currentIndex]
-            }
-        })
+        if(this.songs) {
+            Object.defineProperty(this, 'currentSong', {
+                get: function () {
+                    return this.songs[this.currentIndex]
+                }
+            })
+        }
     },
     loadCurrentSong:function () {
         heading.innerText=this.currentSong.name
@@ -183,12 +210,16 @@ let app={
         }
         lightBtn.onclick=function (){
             main.classList.remove('darkMode')
-            app.start()
         }
         darkBtn.onclick=function (){
             main.classList.add('darkMode')
-            app.start()
         }
+    },
+    addsSong:function (list){
+      let newSong=list.map(function (song){
+           return song
+        })
+        this.songs.push(newSong)
     },
     nextSong: function () {
         this.currentIndex++
@@ -221,11 +252,17 @@ let app={
         // defind all properties for object
         this.defindedProperties()
         //load current into UI
-        this.loadCurrentSong()
+        if(this.songs) {
+            this.loadCurrentSong()
+        }
         this.handleEvents()
         // render playlist
-        this.render()
+        this.getMusic(function (songs){
+            app.render(songs)
+            app.addsSong(songs)
+        })
     }
+
 }
 function playScreen(){
     audio.play()
@@ -235,11 +272,10 @@ function pausedScreen(){
     audio.pause()
     bightml.classList.remove('playing')
 }
-
-
 function closeScreen(){
     let html=$('.playingScreen')
     bightml.removeChild(html)
 }
 app.start()
 console.log(playlist)
+

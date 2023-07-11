@@ -1,0 +1,75 @@
+{
+  "MusicDatabase": [
+    {
+      "id": 0,
+      "name":"Lost",
+      "singer":"Obito",
+      "path":"Asset/audio/LOST  Obito OFFICIAL MV.mp3",
+      "image":"Asset/image/lost.png"
+    }
+    , {
+      "id": 1,
+      "name":"Lần Cuối",
+      "singer":"Ngọt",
+      "path":"Asset/audio/LẦN CUỐI đi bên em xót xa người ơi.mp3",
+      "image":"Asset/image/LanCuoi.png"
+
+    },
+    {
+      "id": 2,
+      "name":"Suit & Tie",
+      "singer":"MCK ft Hoàng Tôn",
+      "path":"Asset/audio/03 Suit  Tie  RPT MCK  ft Hoàng Tôn.mp3",
+      "image":"Asset/image/Mck.png"
+    },
+    {
+      "id": 3,
+      "name":"Xanh",
+      "singer":"Ngọt",
+      "path":"Asset/audio/Ngot  Xanh.mp3",
+      "image":"Asset/image/LanCuoi.png"
+    },
+    {
+      "id": 4,
+      "name":"Green Love",
+      "singer":" Qnt ft Chill&Free",
+      "path":"Asset/audio/Chillnfree  GREEN LOVE  CASHMEL ft QNT Prod by RASTZ.mp3",
+      "image":"Asset/image/GreenLove.png"
+    },
+    {
+      "id": 5,
+      "name":"Soju love",
+      "singer":"Obito",
+      "path":"Asset/audio/SOJU LOVE  Obito  Official Music Video.mp3",
+      "image":"Asset/image/SojuLove.png"
+    },
+    {
+      "id": 6,
+      "name":"Tiền là chi",
+      "singer":"Obito ft OceanMob",
+      "path":"Asset/audio/TIỀN LÀ CHI  MCREDIT X OCEAN MOB OBITO GILL XOLITXO WAVY WILLISTIC  OFFICIAL MUSIC VidEO.mp3",
+      "image":"Asset/image/lost.png"
+    },
+    {
+      "id": 7,
+     "name":"Anh đã ổn hơn",
+      "singer":"MCK",
+      "path":"Asset/audio/14 Anh Đã Ổn Hơn  RPT MCK  99 the album.mp3",
+      "image":"Asset/image/Mck.png"
+    },
+    {
+      "id": 8,
+      "name":"Tối nay ta đi đâu nhờ",
+      "singer":"MCK",
+      "path":"Asset/audio/05 Tối Nay Ta Đi Đâu Nhờ  RPT MCK Remix.mp3",
+      "image":"Asset/image/Mck.png"
+    },
+    {
+      "id": 9,
+      "name": "Chỉ một đêm nũa thôi",
+      "singer": "MCK ft Tlinh",
+      "path": "Asset/audio/06 Chỉ Một Đêm Nữa Thôi  RPT MCK  ft tlinh .mp3",
+      "image":"Asset/image/Mck.png"
+    }
+    ]
+}
