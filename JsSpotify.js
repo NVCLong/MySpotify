@@ -104,14 +104,14 @@ let app={
             id: 7,
             name: "Cau Vinh Tuy",
             singer: "Wren evan",
-            path: "Asset/audio/Y2meta.app - WREN EVANS - Cầu Vĩnh Tuy _ LOI CHOI The First Album (ft. itsnk) (128 kbps).mp3",
+            path: "Asset/audio/Y2meta.app - WREN EVANS - Cầu Vĩnh Tuy _ LOI CHOI The First Album (ft. itsnk) (64 kbps).mp3",
             image:"Asset/image/WrenEvans.jpg"
         },
         {
             id: 8,
             name: "Phong do tim em",
             singer: "Wren evan",
-            path: "Asset/audio/Y2meta.app - WREN EVANS - Phóng Đổ Tim Em _ LOI CHOI The First Album (ft. itsnk) (128 kbps).mp3",
+            path: "Asset/audio/Y2meta.app - WREN EVANS - Phóng Đổ Tim Em _ LOI CHOI The First Album (ft. itsnk) (64 kbps).mp3",
             image:"Asset/image/WrenEvans.jpg"
         },
 
@@ -119,7 +119,7 @@ let app={
             id: 9,
             name: "To Te Ti",
             singer: "Wren evan",
-            path: "Asset/audio/Y2meta.app - WREN EVANS - Tò Te Tí _ LOI CHOI The First Album (ft. itsnk) (128 kbps).mp3",
+            path: "Asset/audio/Y2meta.app - WREN EVANS - Tò Te Tí _ LOI CHOI The First Album (ft. itsnk) (64 kbps).mp3",
             image:"Asset/image/WrenEvans.jpg"
         }
     ],
