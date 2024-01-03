@@ -41,7 +41,6 @@ st()
 let app={
     currentIndex:0,
     getMusic:function (callback) {
-
             fetch(musicAPI)
                 .then(function (response){
                     return response.json()
@@ -123,16 +122,16 @@ let app={
             image:"Asset/image/WrenEvans.jpg"
         }
     ],
-    render: function (songs) {
-        const html=songs.map(function (song) {
-            return `
+        render: function () {
+            const html=this.songs.map(function (song) {
+                return `
          <div class="music-card">
             <a href="#"><img id="${song.id}" src="${song.image}" alt="" class="img"></a>
             <p class="title">${song.name}</p>
          </div>`
-        })
-        playlist.innerHTML=html.join("")
-    },
+            })
+            playlist.innerHTML=html.join("")
+        },
     defindedProperties: function () {
         if(this.songs) {
             Object.defineProperty(this, 'currentSong', {
@@ -258,10 +257,8 @@ let app={
         }
         this.handleEvents()
         // render playlist
-        this.getMusic(function (songs){
-            app.render(songs)
-            app.addsSong(songs)
-        })
+        app.render()
+        app.addsSong(songs)
     }
 
 }
