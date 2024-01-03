@@ -52,24 +52,25 @@
     },
     {
       "id": 7,
-     "name":"Anh đã ổn hơn",
-      "singer":"MCK",
-      "path":"Asset/audio/14 Anh Đã Ổn Hơn  RPT MCK  99 the album.mp3",
-      "image":"Asset/image/Mck.png"
+      "name": "Cau Vinh Tuy",
+      "singer": "Wren evan",
+      "path": "Asset/audio/Y2meta.app - WREN EVANS - Cầu Vĩnh Tuy _ LOI CHOI The First Album (ft. itsnk) (128 kbps).mp3",
+      "image":"Asset/image/WrenEvans.jpg"
     },
     {
       "id": 8,
-      "name":"Tối nay ta đi đâu nhờ",
-      "singer":"MCK",
-      "path":"Asset/audio/05 Tối Nay Ta Đi Đâu Nhờ  RPT MCK Remix.mp3",
-      "image":"Asset/image/Mck.png"
+      "name": "Phong do tim em",
+      "singer": "Wren evan",
+      "path": "Asset/audio/Y2meta.app - WREN EVANS - Phóng Đổ Tim Em _ LOI CHOI The First Album (ft. itsnk) (128 kbps).mp3",
+      "image":"Asset/image/WrenEvans.jpg"
     },
+
     {
       "id": 9,
-      "name": "Chỉ một đêm nũa thôi",
-      "singer": "MCK ft Tlinh",
-      "path": "Asset/audio/06 Chỉ Một Đêm Nữa Thôi  RPT MCK  ft tlinh .mp3",
-      "image":"Asset/image/Mck.png"
+      "name": "To Te Ti",
+      "singer": "Wren evan",
+      "path": "Asset/audio/Y2meta.app - WREN EVANS - Tò Te Tí _ LOI CHOI The First Album (ft. itsnk) (128 kbps).mp3",
+      "image":"Asset/image/WrenEvans.jpg"
     }
     ]
 }
